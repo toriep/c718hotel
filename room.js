@@ -15,10 +15,13 @@ class Room{
 			return true;
 		}
 	}
+	
 	removeOccupant(){
-
+		this.occupant=null;
+		currentHotel.checkOutCustomer();
+		customer.room=null;
 	}
 	getRoomService(food){
-		this.hotel.getKitchenService();
+		currentHotel.getKitchenService(food,room);
 	}
 }
